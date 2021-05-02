@@ -1,0 +1,25 @@
+<head><script defer src="dist/vendor.js"></script><script defer src="dist/app.js"></script></head>{% extends 'Web/base.html.twig' %}
+{% trans_default_domain 'web' %}
+
+{% block head_title %}{{ 'page_404.title'|trans }} - {{ parent() }}{% endblock %}
+{% block head_description %}{{ 'page_404.description'|trans }}{% endblock %}
+{% block head %}{% include 'Web/other/googleLangTag.html.twig' %}{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center section-main section-image">
+        <div class="back-gradient"></div>
+        <div class="container title">
+            <h1>{{ 'page_404.404header'|trans }}</h1>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container text-center">
+            <span class="mb-5 d-block">{{ source('@assets/static/element/404page.svg') }}</span>
+
+            <p class="mb-0 fs-2">{{ 'page_404.404content'|trans }}<br>
+                <a href="{{ path('homepage') }}">{{ 'page_404.gohome'|trans }}</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

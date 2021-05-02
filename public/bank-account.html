@@ -1,0 +1,63 @@
+<head><script defer src="dist/vendor.js"></script><script defer src="dist/app.js"></script></head>{% extends 'Web/base.html.twig' %}
+{% trans_default_domain 'web' %}
+
+{% block head_title %}{{ 'page_bank.title'|trans }} - {{ parent() }}{% endblock %}
+{% block head_description %}{{ 'page_bank.description'|trans }}{% endblock %}
+{% block head %}{% include 'Web/other/googleLangTag.html.twig' %}{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center section-main section-image">
+        <div class="back-gradient"></div>
+        <div class="container main-image"><span>{{ source('@assets/static/element/wallet.svg') }}</span></div>
+        <div class="container title">
+            <h1>{{ 'page_bank.section_main.title_header'|trans|raw }}</h1>
+            <p class="description">{{ 'page_bank.section_main.title_description'|trans }}</p>
+        </div>
+    </div>
+
+    <div class="section overflow-hidden">
+        <div class="container position-relative">
+            <ul class="list-unstyled mb-0">
+                <li class="media align-items-center border rounded p-3 mb-4">
+                    <span class="p-3 d-none d-md-block">{{ source('@assets/static/element/isbank.svg') }}</span>
+                    <div class="media-body ml-4">
+                        <div class="table-responsive-sm">
+                            <table class="table table-sm mb-0 table-borderless">
+                                <tr class="d-sm-block d-md-none"><th colspan="2">İş Bankası</th></tr>
+                                <tr><th>{{ 'page_bank.account'|trans }}</th><td>WriteLN Yazılım Hizmetleri San. Tic. A.Ş</td></tr>
+                                <tr><th>{{ 'page_bank.account_number'|trans }}</th><td>349128960</td></tr>
+                                <tr><th>{{ 'page_bank.wallet_number'|trans }}</th><td>6022-1386525</td></tr>
+                                <tr><th>IBAN:</th><td class="text-break">TR930006400000160221386525 (TL)</td></tr>
+                            </table>
+                        </div>
+                    </div>                  
+                </li>
+                <li class="media align-items-center border rounded p-3 mb-4">
+                    <span class="p-3 d-none d-md-block">{{ source('@assets/static/element/finansbank.svg') }}</span>
+                    <div class="media-body ml-4">
+                        <table class="table table-sm mb-0 table-borderless">
+                            <tr class="d-sm-block d-md-none"><th colspan="2">QNB Finansbank</th></tr>
+                            <tr><th>{{ 'page_bank.account'|trans }}</th><td>WriteLN Yazılım Hizmetleri San. Tic. A.Ş</td></tr>
+                            <tr><th>{{ 'page_bank.account_number'|trans }}</th><td>8149854</td></tr>
+                            <tr><th>{{ 'page_bank.wallet_number'|trans }}</th><td>03663-72310432</td></tr>
+                            <tr><th>IBAN:</th><td>TR370011100000000072310432 (TL)</td></tr>
+                        </table>     
+                    </div>                  
+                </li>
+                <li class="media align-items-center border rounded p-3">
+                    <span class="p-3 d-none d-md-block">{{ source('@assets/static/element/garanti.svg') }}</span>
+                    <div class="media-body ml-4">
+                        <table class="table table-sm mb-0 table-borderless">
+                            <tr class="d-sm-block d-md-none"><th colspan="2">Garanti BBVA</th></tr>
+                            <tr><th>{{ 'page_bank.account'|trans }}</th><td>WriteLN Yazılım Hizmetleri San. Tic. A.Ş</td></tr>
+                            <tr><th>{{ 'page_bank.account_number'|trans }}</th><td>42084272</td></tr>
+                            <tr><th>{{ 'page_bank.wallet_number'|trans }}</th><td>1549-6298783</td></tr>
+                            <tr><th>IBAN:</th><td>TR360006200154900006298783 (TL)</td></tr>
+                        </table>     
+                    </div>                  
+                </li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

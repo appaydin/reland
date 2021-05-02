@@ -1,0 +1,34 @@
+{% extends 'Web/base.html.twig' %}
+{% trans_default_domain 'web' %}
+
+{% block head_title %}{{ 'page_about.title'|trans }} - {{ parent() }}{% endblock %}
+{% block head_description %}{{ 'page_about.description'|trans }}{% endblock %}
+{% block head %}{% include 'Web/other/googleLangTag.html.twig' %}{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center section-main section-image">
+        <div class="back-gradient"></div>
+        <div class="container main-image"><span>{{ source('@assets/static/element/startup.svg') }}</span></div>
+        <div class="container title">
+            <h1>{{ 'page_about.section_main.title_header'|trans|raw }}</h1>
+            <p class="description">{{ 'page_about.section_main.title_description'|trans }}</p>
+        </div>
+    </div>
+
+    <div class="section overflow-hidden">
+        <div class="container position-relative">
+            <h2 class="mb-5 text-terminal">{{ 'page_about.section_content.title'|trans }}</h2>
+            <p class="mb-0">{{ 'page_about.section_content.aboutus'|trans|raw }}</p>
+        </div>
+    </div>
+
+    <div class="section pt-0">
+        <div class="container">
+            <div class="text-center bg-light p-4 p-sm-5 rounded">
+                <h2 class="mb-4 text-center">{{ 'page_about.section_carrers.title'|trans }}</h2>
+                <a href="{{ path('company_careers') }}"
+                   class="btn btn-lg btn-primary mt-2">{{ 'page_about.section_carrers.title_btn'|trans }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

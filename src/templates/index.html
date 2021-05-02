@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Root -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Language" content="en">
+
+    <!-- Meta Title -->
+    <title>Reland Real Estate HTML Template</title>
+    <meta name="description" content="Reland Real Estate HTML Template">
+    <meta name="keywords" content="Reland Real Estate HTML Template"/>
+    <meta name="copyright" content="Reland">
+
+    <!-- Fav Icons -->
+    <link rel="icon" type="image/png" href="">
+
+    <!-- Assets -->
+    <link rel="stylesheet" href="dist/app.css">
+    <script src="dist/vendor.js"></script>
+    <script src="dist/app.js"></script>
+</head>
+<body>
+<!----------------------------------------------------
+                  Head Navigation
+----------------------------------------------------->
+<nav class="navbar navbar-expand-md">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="/">
+            <img inline src="../src/assets/static/logo/logo.svg">
+        </a>
+
+        <!-- Navbar Toggler -->
+        <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navigation">
+            <img inline src="../src/assets/static/element/bars.svg">
+        </button>
+
+        <!-- Navigation -->
+        <div id="navigation" class="navbar-collapse collapse">
+            <div class="content d-md-flex">
+                <!--Left Section-->
+                <ul class="navbar-nav ml-md-2 ml-lg-4 mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="crm.html">Properties</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item media" href="crm.html">
+                                <span class="mr-3"><img inline src="../src/assets/static/element/teams.svg"></span>
+                                <div class="media-body align-self-center"><h4>CRM</h4><span class="desc">Customer Relationship Management</span></div>
+                            </a>
+                            <a class="dropdown-item media" href="portfolio.html">
+                                <span class="mr-3"><img inline src="../src/assets/static/element/interview.svg"></span>
+                                <div class="media-body align-self-center"><h4>Portfolio</h4><span class="desc">Portfolio</span></div>
+                            </a>
+                            <a class="dropdown-item media" href="website.html">
+                                <span class="mr-3"><img inline src="../src/assets/static/element/www.svg"></span>
+                                <div class="media-body align-self-center"><h4>Website</h4><span class="desc">Free Website Maker</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="references.html">References</a></li>
+                </ul>
+
+                <!-- Right Section -->
+                <ul class="navbar-nav">
+
+                    <!--Company Information-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Company</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item media" href="faq.html">
+                                <span class="mr-3"><img inline src="../src/assets/static/element/help.svg"></span>
+                                <div class="media-body align-self-center"><h4>Help</h4><span class="desc">Go to the help center.</span></div>
+                            </a>
+                            <a class="dropdown-item media" href="roadmap.html">
+                                <span class="mr-3"><img inline src="../src/assets/static/element/roadmap.svg"></span>
+                                <div class="media-body align-self-center"><h4>Roadmap</h4><span class="desc">Roadmap Description</span></div>
+                            </a>
+
+                            <div class="dropdown-block">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item media" href="about.html">About</a></li>
+                                            <li><a class="dropdown-item media" href="legal.html">Legal</a></li>
+                                            <li><a class="dropdown-item media" href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item media" href="teams.html">Teams</a></li>
+                                            <li><a class="dropdown-item media" href="careers.html">Careers</a></li>
+                                            <li><a class="dropdown-item media" href="bank-account.html">Bank Account</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Language-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <img inline src="../src/assets/static/element/globe.svg">
+                            <span class="text">{{ 'head.nav.language'|trans }}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="/">Turkish</a>
+                            <a class="dropdown-item" href="/">English</a>
+                        </div>
+                    </li>
+
+                    <!--Login-->
+                    <li class="nav-item"><a class="nav-link" href="/">Login</a></li>
+
+                    <!--Register-->
+                    <li class="nav-item hrbottom"><hr>
+                        <a class="btn btn-lg btn-primary btnregister" href="/">Register</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!----------------------------------------------------
+                      Container
+----------------------------------------------------->
+<main role="main">
+    <div class="d-flex section-main section-home justify-content-sm-start justify-content-center align-items-center">
+        <div class="back-gradient">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001 231" fill="#fff">
+                <path d="M.31 226.909s31.645 3.904 47.508 3.298c17.669-.674 35.312-3.484 52.479-7.697 84.306-20.687 122.709-69.847 209.366-75.319 60.697-3.832 205.784 35.296 264.055 35.296 141.271 0 198.944-153.135 337.527-180.433 29.276-5.767 89.491 2.749 89.491 2.749l-.543 227.046-1000.39-.009.504-4.931z"/>
+            </svg>
+        </div>
+        <div class="container main-image"><span><img src="{{ asset('static/apps/'~ app.request.locale ~'/home-app.png') }}" alt="emlakPRO App"></span></div>
+        <div class="container title">
+            <h1 class="display-2">{{ 'page_home.section_main.title_header'|trans|raw }}</h1>
+            <p class="description">{{ 'page_home.section_main.title_description'|trans }}</p>
+            <p class="mb-0 mt-5">
+                <a href="{{ path('app_register') }}" class="btn btn-lg btn-primary mt-2 ml-1 mr-1 mt-sm-0 mr-sm-0 ml-sm-0">{{ 'page_home.section_main.free_use_btn'|trans }}</a>
+                <a href="{{ path('product_website') }}#themes" class="btn btn-lg btn-info mt-2 ml-1 mr-1 mt-sm-0 mr-sm-0 ml-sm-0">WEBSITE DEMO</a>
+            <p class="mt-2 pt-1 fs--3 ">{{ 'page_home.section_main.free_use_desc'|trans }}</p>
+            </p>
+        </div>
+    </div>
+
+    <div class="section section-product">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_home.section_product.whatis'|trans }}</div>
+            <h2 class="section-title mb-4">{{ 'page_home.section_product.title_head'|trans }}</h2>
+            <div class="description text-center">{{ 'page_home.section_product.title_description'|trans }}</div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="wrap">
+                        <div class="icon">{{ source('@assets/static/element/price.svg') }}</div>
+                        <h5 class="title">{{ 'page_home.section_product.free_test'|trans }}</h5>
+                        <p class="desc">{{ 'page_home.section_product.free_test_description'|trans }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-md-0 mt-sm-0 mt-4">
+                    <div class="wrap">
+                        <div class="icon">{{ source('@assets/static/element/security-cloud.svg') }}</div>
+                        <h5 class="title">{{ 'page_home.section_product.fast_disk'|trans }}</h5>
+                        <p class="desc">{{ 'page_home.section_product.fast_disk_description'|trans }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12 mt-md-0 mt-md-0 mt-4">
+                    <div class="wrap">
+                        <div class="icon">{{ source('@assets/static/element/settings.svg') }}</div>
+                        <h5 class="title">{{ 'page_home.section_product.scaling'|trans }}</h5>
+                        <p class="desc">{{ 'page_home.section_product.scaling_description'|trans }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-color-green section-gallery">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_home.section_gallery.whatis'|trans }}</div>
+            <div class="gallery-list magnific">
+                <a href="{{ asset('static/apps/'~ app.request.locale ~'/page-search.png') }}"><img src="{{ asset('static/apps/'~ app.request.locale ~'/page-search.png') }}" alt="emlakPRO App Search"></a>
+                <a href="{{ asset('static/apps/'~ app.request.locale ~'/page-property.png') }}"><img src="{{ asset('static/apps/'~ app.request.locale ~'/page-property.png') }}" alt="emlakPRO App Property"></a>
+                <a href="{{ asset('static/apps/'~ app.request.locale ~'/page-portfolio.png') }}"><img src="{{ asset('static/apps/'~ app.request.locale ~'/page-portfolio.png') }}" alt="emlakPRO App Property"></a>
+                <a href="{{ asset('static/apps/'~ app.request.locale ~'/page-customer.png') }}"><img src="{{ asset('static/apps/'~ app.request.locale ~'/page-customer.png') }}" alt="emlakPRO App Property"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-color section-manage">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_home.section_manage.whatis'|trans }}</div>
+            <h2 class="mb-4">{{ 'page_home.section_manage.title'|trans }}</h2>
+            <div class="description mb-5">{{ 'page_home.section_manage.title_description'|trans }}</div>
+
+            <ul class="timeline">
+                <li>
+                    <div class="img">{{ source('@assets/static/element/teams.svg') }}</div>
+                    <div class="body">
+                        <h4 class="title">{{ 'page_home.section_manage.crm'|trans }}</h4>
+                        <div class="text">
+                            {{ 'page_home.section_manage.crm_desc'|trans }}
+                            <div class="mt-3"><a href="{{ path('product_crm') }}" class="btn btn-primary">{{ 'page_home.section_manage.details_btn'|trans }}</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img">{{ source('@assets/static/element/interview.svg') }}</div>
+                    <div class="body">
+                        <h4 class="title">{{ 'page_home.section_manage.portfolio'|trans }}</h4>
+                        <div class="text">
+                            {{ 'page_home.section_manage.portfolio_desc'|trans }}
+                            <div class="mt-3"><a href="{{ path('product_portfolio') }}" class="btn btn-primary">{{ 'page_home.section_manage.details_btn'|trans }}</a></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="img">{{ source('@assets/static/element/www.svg') }}</div>
+                    <div class="body">
+                        <h4 class="title">{{ 'page_home.section_manage.website'|trans }}</h4>
+                        <div class="text">
+                            {{ 'page_home.section_manage.website_desc'|trans }}
+                            <div class="mt-3"><a href="{{ path('product_website') }}" class="btn btn-primary">{{ 'page_home.section_manage.details_btn'|trans }}</a></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section section-infrastructure">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_home.section_infra.whatis'|trans }}</div>
+            <h2 class="mb-4">{{ 'page_home.section_infra.title'|trans }}</h2>
+            <div class="description mb-5">{{ 'page_home.section_infra.title_description'|trans }}</div>
+
+            <div class="features row">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/headhunting.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.realtime'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.realtime_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/monitoring.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.monitoring'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.monitoring_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-md-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/map.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.maps'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.maps_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features row mt-md-5 mt-4">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/dns.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.domain'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.domain_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/seo.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.seo'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.seo_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/responsive.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.responsive'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.responsive_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features row mt-md-5 mt-4">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/help.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.livechat'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.livechat_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/conversation.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.teams'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.teams_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-md-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/speedometer.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_home.section_infra.highload'|trans }}</h5>
+                            <div class="media-text">{{ 'page_home.section_infra.highload_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-process section-color">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_home.section_process.whatis'|trans }}</div>
+            <h2 class="mb-5">{{ 'page_home.section_process.title'|trans }}</h2>
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 mb-5 mb-sm-0 text-center">
+                    <div class="image">{{ source('@assets/static/element/heart.svg') }}</div>
+                    <h2 class="text-primary font-weight-bold">750+</h2>
+                    <h6 class="text-capitalize">{{ 'page_home.section_process.happy_customer'|trans }}</h6>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-5 mb-sm-0 text-center">
+                    <div class="image">{{ source('@assets/static/element/company.svg') }}</div>
+                    <h2 class="text-primary font-weight-bold">30.000+</h2>
+                    <h6 class="text-capitalize">{{ 'page_home.section_process.real_estate_count'|trans }}</h6>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-5 mb-sm-0 text-center">
+                    <div class="image">{{ source('@assets/static/element/interview.svg') }}</div>
+                    <h2 class="text-primary font-weight-bold">40.000+</h2>
+                    <h6 class="text-capitalize">{{ 'page_home.section_process.portfolio_count'|trans }}</h6>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-5 mb-sm-0 text-center">
+                    <div class="image">{{ source('@assets/static/element/design.svg') }}</div>
+                    <h2 class="text-primary font-weight-bold">20+</h2>
+                    <h6 class="text-capitalize">{{ 'page_home.section_process.website_themes'|trans }}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-cloud">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_home.section_website.whatis'|trans }}</div>
+            <h2 class="mb-4">{{ 'page_home.section_website.title'|trans }}</h2>
+            <div class="description mb-5">{{ 'page_home.section_website.title_description'|trans }}</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="card-os"><a href="https://demo.emlakpro.net" class="card-img" target="_blank"><img src="{{ asset('static/apps/theme-default.png') }}" alt="Theme Default"></a></div>
+                    <h5 class="card-title">Default</h5>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+                    <div class="card-os"><a href="https://ankara.emlakpro.net" class="card-img" target="_blank"><img src="{{ asset('static/apps/theme-ankara.png') }}" alt="Theme Ankara"></a></div>
+                    <h5 class="card-title">Ankara</h5>
+                </div>
+                {#<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="card-os">
+                    <a href="{{ path('app_demo', {'theme': 'newyork'}) }}" class="card-img" target="_blank"><img src="{{ asset('static/apps/theme-newyork.png') }}" alt="Theme NewYork"></a>
+                </div>
+                <h5 class="card-title">NewYork</h5>
+            </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="card-os">
+                        <a href="{{ path('app_demo', {'theme': 'adana'}) }}" class="card-img" target="_blank"><img src="{{ asset('static/apps/theme-adana.png') }}" alt="Theme Adana"></a>
+                    </div>
+                    <h5 class="card-title">Adana</h5>
+                </div>#}
+            </div>
+
+            <a class="mt-5 btn btn-lg btn-primary" href="{{ path('product_website') }}#themes">{{ 'page_home.section_website.view_all_btn'|trans }}</a>
+        </div>
+    </div>
+
+    <div class="section pt-3">
+        <div class="container">
+            <div class="bg-light p-4 p-sm-5 text-center text-md-left rounded d-md-flex align-items-center">
+                <div class="mb-4 mb-md-0">
+                    <h2 class="mb-2">{{ 'footer.are_you_ready'|trans }}</h2>
+                    <h6 class="mb-0">{{ 'footer.are_you_ready_desc'|trans }}</h6>
+                </div>
+                <a class="btn btn-lg btn-primary ml-auto" href="{{ path('app_register') }}">{{ 'footer.create_account'|trans }}</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!----------------------------------------------------
+                        Footer
+----------------------------------------------------->
+<!--<div class="live-contact">
+    <a href="https://wa.me/085000000000" class="whatsapp" target="_blank">
+        <img inline src="../src/assets/static/element/whatsapp.svg">
+    </a>
+</div>-->
+<footer>
+    <div class="back-footer"></div>
+    <div class="footersub">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-6 mb-4 collogo">
+                    <ul class="list-unstyled colinfo">
+                        <!--Logo-->
+                        <li><a class="logo d-block mb-4" href="/"><img inline src="../src/assets/static/logo/logo.svg"></a></li>
+                        <li>App Showcase HTML Template</li>
+
+                        <!--Social-->
+                        <li class="social list-unstyled mt-5">
+                            <a href="/" target="_blank"><img inline src="../src/assets/static/element/social-facebook.svg"></a>
+                            <a href="/" target="_blank"><img inline src="../src/assets/static/element/social-twitter.svg"></a>
+                            <a href="/" target="_blank"><img inline src="../src/assets/static/element/social-instagram.svg"></a>
+                            <a href="/" target="_blank"><img inline src="../src/assets/static/element/social-youtube.svg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md col-sm col-6 mb-sm-0 mb-4">
+                    <h4>Properties</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="crm.html">CRM</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="website.html">Website</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md col-sm col-6 mb-sm-0 mb-4">
+                    <h4>Resources</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="faq.html">Faq</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="bank-account.html">Bank Account</a></li>
+                    </ul>
+                </div>
+                <div class="col-md col-sm col-6 mb-sm-0 mb-4">
+                    <h4>Company</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="legal.html">Legal</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Copyright-->
+    <div class="container">
+        <div class="pt-4 pb-4 d-flex copyright text-center text-sm-left">
+            <div class="text-white mr-auto align-self-center">Reland App Showcase HTML Template</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

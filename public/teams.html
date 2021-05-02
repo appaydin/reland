@@ -1,0 +1,39 @@
+<head><script defer src="dist/vendor.js"></script><script defer src="dist/app.js"></script></head>{% extends 'Web/base.html.twig' %}
+{% trans_default_domain 'web' %}
+
+{% block head_title %}{{ 'page_teams.title'|trans }} - {{ parent() }}{% endblock %}
+{% block head_description %}{{ 'page_teams.description'|trans }}{% endblock %}
+{% block head %}{% include 'Web/other/googleLangTag.html.twig' %}{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center section-main section-image">
+        <div class="back-gradient"></div>
+        <div class="container main-image"><span>{{ source('@assets/static/element/team.svg') }}</span></div>
+        <div class="container title">
+            <h1>{{ 'page_teams.section_main.title_header'|trans }}</h1>
+            <p class="description">{{ 'page_teams.section_main.title_description'|trans }}</p>
+        </div>
+    </div>
+
+    <div class="section pt-5 pb-5 mt-2 mb-2">
+        <div class="container">
+            <div class="row">
+                {% for person in teams %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div class="person">
+                            <img src="{{ asset(person.profile.image, 'upload') }}" alt="{{ person.profile.firstname }} {{ person.profile.lastname }}">
+                            <span class="mb-2">{{ person.profile.firstname }} {{ person.profile.lastname }}</span>
+                            <p class="mb-3">{{ person.profile.jobPosition }}</p>
+                            <div class="social mb-3">
+                                {% if person.profile.twitter is not empty %}<a href="https://twitter.com/{{ person.profile.twitter }}" target="_blank">{{ source('@assets/static/element/social-twitter.svg') }}</a>{% endif %}
+                                {% if person.profile.facebook is not empty %}<a href="{{ person.profile.facebook }}" target="_blank">{{ source('@assets/static/element/social-facebook.svg') }}</a>{% endif %}
+                                {% if person.profile.instagram is not empty %}<a href="https://www.instagram.com/{{ person.profile.instagram }}" target="_blank">{{ source('@assets/static/element/social-instagram.svg') }}</a>{% endif %}
+                                {% if person.profile.linkedin is not empty %}<a href="{{ person.profile.linkedin }}" target="_blank">{{ source('@assets/static/element/social-linkedin.svg') }}</a>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,126 @@
+<head><script defer src="dist/vendor.js"></script><script defer src="dist/app.js"></script></head>{% extends 'Web/base.html.twig' %}
+{% trans_default_domain 'web' %}
+
+{% block head_title %}{{ 'page_contact.title'|trans }} - {{ parent() }}{% endblock %}
+{% block head %}{% include 'Web/other/googleLangTag.html.twig' %}{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center section-main">
+        <div class="back-gradient"></div>
+        <div class="container main-image"><span>{{ source('@assets/static/element/envelope.svg') }}</span></div>
+        <div class="container title"><h1>{{ 'page_contact.section_main.title_header'|trans }}</h1></div>
+        <div class="container nav-menus">
+            <ul class="nav-pages">
+                <li><a data-toggle="collapse" aria-expanded="true" href="#contact">{{ 'page_contact.menus.head_office'|trans }}</a></li>
+                <li><a data-toggle="collapse" href="#support">{{ 'page_contact.menus.support'|trans }}</a></li>
+                <li><a data-toggle="collapse" href="#abuseReport">{{ 'page_contact.menus.abuse_report'|trans }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact-accordion">
+        {# Contact Section #}
+        <div id="contact" data-parent="#contact-accordion" class="collapse show">
+            <div class="section overflow-hidden">
+                <div class="container">
+                    <iframe width="100%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=36.23526513576508%2C37.06225344114529%2C36.2397712469101%2C37.06539541315743&layer=mapnik&marker=37.063824443418575%2C36.237518191337585" style="border: none; border-radius: 3px"></iframe>
+                </div>
+
+                <div class="container mt-5 pt-5 position-relative">
+                    <h3 class="d-block mb-4">{{ bag.get('contact_company_name') }}</h3>
+                    <div class="mb-4">{{ 'page_contact.section_office.work_time'|trans }}</div>
+                    <table class="table table-borderless th-slim">
+                        <tr>
+                            <th>{{ 'page_contact.section_office.adress'|trans }}</th>
+                            <td>{{ bag.get('contact_address') }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'page_contact.section_office.phonenumber'|trans }}</th>
+                            <td>{{ bag.get('contact_phone') }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'page_contact.section_office.taxnumber'|trans }}</th>
+                            <td>{{ bag.get('contact_tax_number') }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'page_contact.section_office.mersisnumber'|trans }}</th>
+                            <td>{{ bag.get('contact_mersis') }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'page_contact.section_office.email'|trans }}</th>
+                            <td>{{ bag.get('contact_email') }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        {# Support Section #}
+        <div id="support" data-parent="#contact-accordion" class="collapse">
+            <div class="section">
+                <div class="container">
+                    <h2 class="mb-4">{{ 'page_contact.section_support.title'|trans }}</h2>
+                    <p class="mb-5">{{ 'page_contact.section_support.description'|trans }}</p>
+
+                    {# Form #}
+                    {% form_theme form_contact 'bootstrap_4_layout.html.twig' %}
+                    {{ form_start(form_contact) }}
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                {{ form_label(form_contact.name) }}
+                                {{ form_widget(form_contact.name) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(form_contact.email) }}
+                                {{ form_widget(form_contact.email) }}
+                            </div>
+                        </div>
+                        {{ form_row(form_contact.company) }}
+                        {{ form_row(form_contact.subject) }}
+                        {{ form_row(form_contact.message) }}
+                        <button type="submit" id="submit" name="submit" class="btn btn-lg btn-primary">{{ 'page_contact.section_support.submit_btn'|trans }}</button>
+                        <span class="loading ml-4"></span>
+                    {{ form_end(form_contact) }}
+                </div>
+            </div>
+        </div>
+
+        {# Abuse Report Section #}
+        <div id="abuseReport" data-parent="#contact-accordion" class="collapse">
+            <div class="section">
+                <div class="container">
+                    <h2 class="mb-4">{{ 'page_contact.section_abuse.title'|trans }}</h2>
+                    <p class="mb-5 ">{{ 'page_contact.section_abuse.description'|trans }}</p>
+
+                    {% form_theme form_abuse 'bootstrap_4_layout.html.twig' %}
+                    {{ form_start(form_abuse) }}
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                {{ form_label(form_abuse.name) }}
+                                {{ form_widget(form_abuse.name) }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form_label(form_abuse.email) }}
+                                {{ form_widget(form_abuse.email) }}
+                            </div>
+                        </div>
+                        {{ form_row(form_abuse.company) }}
+                        {{ form_row(form_abuse.subject) }}
+                        {{ form_row(form_abuse.message) }}
+                        <button type="submit" id="submit" name="submit" class="btn btn-lg btn-primary">{{ 'page_contact.section_abuse.submit_btn'|trans }}</button>
+                        <span class="loading ml-4"></span>
+                    {{ form_end(form_abuse) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pt-0">
+        <div class="container">
+            <div class="text-center rounded bg-light p-4 p-sm-5">
+                <h2 class="mb-4 text-center">{{ 'page_contact.section_carrers.title'|trans }}</h2>
+                <a href="{{ path('company_careers') }}" class="btn btn-lg btn-primary mt-2">{{ 'page_contact.section_carrers.title_btn'|trans }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

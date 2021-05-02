@@ -1,0 +1,166 @@
+{% extends 'Web/base.html.twig' %}
+{% trans_default_domain 'web' %}
+
+{% block head_title %}{{ 'page_portfolio.title'|trans }} - {{ parent() }}{% endblock %}
+{% block head_description %}{{ 'page_portfolio.description'|trans }}{% endblock %}
+{% block head_keywords %}{{ 'page_portfolio.tags'|trans }}{% endblock %}
+{% block head %}{% include 'Web/other/googleLangTag.html.twig' %}{% endblock %}
+
+
+{% block body %}
+    <div class="d-flex align-items-center section-main">
+        <div class="back-gradient"></div>
+        <div class="container title">
+            <h1>{{ 'page_portfolio.section_main.title'|trans }}</h1>
+            <p class="description">{{ 'page_portfolio.section_main.title_desc'|trans }}</p>
+        </div>
+    </div>
+
+    <div class="section section-product">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">{{ 'page_portfolio.section_product.title'|trans }}</h2>
+            <div class="description text-center">{{ 'page_portfolio.section_product.title_desc'|trans }}</div>
+            <div class="mb-5"><img class="img-full-width rounded shadow" src="{{ asset('static/apps/'~ app.request.locale ~'/page-search.png') }}" alt="emlakPRO App Dashboard"></div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="wrap">
+                        <div class="icon">{{ source('@assets/static/element/headhunting.svg') }}</div>
+                        <h5 class="title">{{ 'page_portfolio.section_product.item1'|trans }}</h5>
+                        <p class="desc">{{ 'page_portfolio.section_product.item1_desc'|trans }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-md-0 mt-sm-0 mt-4">
+                    <div class="wrap">
+                        <div class="icon">{{ source('@assets/static/element/mobile.svg') }}</div>
+                        <h5 class="title">{{ 'page_portfolio.section_product.item2'|trans }}</h5>
+                        <p class="desc">{{ 'page_portfolio.section_product.item2_desc'|trans }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12 mt-md-0 mt-md-0 mt-4">
+                    <div class="wrap">
+                        <div class="icon">{{ source('@assets/static/element/notes.svg') }}</div>
+                        <h5 class="title">{{ 'page_portfolio.section_product.item3'|trans }}</h5>
+                        <p class="desc">{{ 'page_portfolio.section_product.item3_desc'|trans }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-color-green text-white  section-cloud section-pricing">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">{{ 'page_portfolio.section_pps.header'|trans }}</div>
+            <h2 class="mb-4">{{ 'page_portfolio.section_pps.title'|trans }}</h2>
+            <div class="description mb-0">{{ 'page_portfolio.section_pps.title_desc'|trans }}</div>
+        </div>
+    </div>
+
+    <div class="section section-color section-right-image float-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 pr-md-3 pr-lg-5">
+                    <div class="badge badge-app mb-4">{{ 'page_portfolio.section_search.header'|trans }}</div>
+                    <h2 class="mb-5">{{ 'page_portfolio.section_search.title'|trans|raw }}</h2>
+                    <div class="description">{{ 'page_portfolio.section_search.description'|trans|raw }}</div>
+                </div>
+                <div class="col-md-6 col-sm-12 card-img">
+                    <span>{{ source('@assets/static/element/search-people.svg') }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-color section-right-image pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 card-img">
+                    <span class="float-md-right">{{ source('@assets/static/element/flow.svg') }}</span>
+                </div>
+                <div class="col-md-6 col-sm-12 pt-sm-5 pt-md-0 pl-md-3 pl-lg-5 mt-5 mt-sm-0">
+                    <div class="badge badge-app mb-4">{{ 'page_portfolio.section_dev.header'|trans }}</div>
+                    <h2 class="mb-5">{{ 'page_portfolio.section_dev.title'|trans|raw }}</h2>
+                    <div class="description mb-0">{{ 'page_portfolio.section_dev.description'|trans|raw }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-cloud section-infrastructure">
+        <div class="container text-center">
+            <div class="badge badge-app mb-4">CRM</div>
+            <h2 class="mb-5">{{ 'page_portfolio.section_props.title'|trans }}</h2>
+
+            <div class="features row">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/camera.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_portfolio.section_props.item1'|trans }}</h5>
+                            <div class="media-text">{{ 'page_portfolio.section_props.item1_desc'|trans|raw }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-md-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/gallery.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_portfolio.section_props.item2'|trans }}</h5>
+                            <div class="media-text">{{ 'page_portfolio.section_props.item2_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/movie.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_portfolio.section_props.item3'|trans }}</h5>
+                            <div class="media-text">{{ 'page_portfolio.section_props.item3_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="features row mt-md-5 mt-4">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/agreement.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_portfolio.section_props.item4'|trans }}</h5>
+                            <div class="media-text">{{ 'page_portfolio.section_props.item4_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-sm-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/notes.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_portfolio.section_props.item5'|trans }}</h5>
+                            <div class="media-text">{{ 'page_portfolio.section_props.item5_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 mt-md-0 mt-4">
+                    <div class="media">
+                        <span class="mr-3">{{ source('@assets/static/element/send.svg') }}</span>
+                        <div class="media-body">
+                            <h5>{{ 'page_portfolio.section_props.item6'|trans }}</h5>
+                            <div class="media-text">{{ 'page_portfolio.section_props.item6_desc'|trans }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pt-3">
+        <div class="container">
+            <div class="bg-light p-4 p-sm-5 text-center text-md-left rounded d-md-flex align-items-center">
+                <div class="mb-4 mb-md-0">
+                    <h2 class="mb-2">{{ 'footer.are_you_ready'|trans }}</h2>
+                    <h6 class="mb-0">{{ 'footer.are_you_ready_desc'|trans }}</h6>
+                </div>
+                <a class="btn btn-lg btn-primary ml-auto" href="{{ path('app_register') }}">{{ 'footer.create_account'|trans }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
