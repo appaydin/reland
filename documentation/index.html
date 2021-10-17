@@ -11,7 +11,7 @@
 		p, table, hr, .box { margin-bottom:25px; }
 		.box p { margin-bottom:10px; }
 		.line-top { border-top: 2px solid #CCC; padding-top: 25px }
-		pre{margin: 0}
+		pre{margin: 0; border:1px solid #AAA; padding: 1rem; border-radius: 5px}
 	</style>
 </head>
 
@@ -37,20 +37,28 @@
 		</p>
 
 		<h3 id="source" class="line-top">A) Build SCSS-JS Source - <a href="#top">⇧</a></h3>
+		<p>
+		<h4><b>Requirements</b></h4>
+		<ul>
+			<li>NodeJS (<a href="https://nodejs.org/en/download/" target="_blank">Install</a>)</li>
+			<li>Yarn (<a href="https://classic.yarnpkg.com/lang/en/docs/install" target="_blank">Install</a>)</li>
+		</ul>
+		</p>
 		<p style="margin-bottom: 0">
 			Scss is used for theme development. The source files are located in the assets/src directory. The compiled files are extracted to the dist directory. You need to use
 			<a href="https://yarnpkg.com/">Yarn</a> to compile. Theme dependencies are copied to the dist directory with the "yarn run build" command.
-            Go to assets/src from console to compile. <br>
+            Go to assets/src from console to compile. <br><br>
             <b>Commands</b>:<br>
 		</p>
         <pre>
 yarn install
 yarn run build // Production
-yarn run watch // Development
-        </pre>
+yarn run watch // Development</pre>
+		<br>
         <img src="source.png">
 
 		<!--Theme End-->
+		<br><br>
 		<p><a href="#top">Go To <b>Table of Contents</b></a></p>
 	</div>
 </body>
