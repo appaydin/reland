@@ -1,18 +1,29 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    ReLand Theme
+Version:    1.0
+Last change:    19.10.2021
+-------------------------------------------------------------------*/
+
+/*======================================================
+ Table of Contents
+=======================================================*/
+// 1. Dependencies
+// 2. Structure
+// 3. Header & Menu
+// 4. Footer
+// 5. Content
+// 6. RoadMap Page
+// 7. Magnific Popup
+// 8. Spinner
+
+
 /*======================================================
  Dependencies
 =======================================================*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap&subset=latin-ext');
 @import "./variables.scss";
-
-/*======================================================
- Custom Variables
-=======================================================*/
-$gradiend-blue: #efede9;
-$gradiend-green: linear-gradient(-190deg, darken($yellow, 15) 0%, $yellow 100%);
-$color: $yellow;
-$color-light: $yellow;
-$text-grey: $gray-700;
-$text-dark: $black;
 
 /*======================================================
  Structure
